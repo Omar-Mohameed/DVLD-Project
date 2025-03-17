@@ -101,26 +101,27 @@
             contextMenuStripPeople.ImageScalingSize = new Size(24, 24);
             contextMenuStripPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, toolStripMenuItem1, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, toolStripMenuItem2, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
             contextMenuStripPeople.Name = "contextMenuStripPeople";
-            contextMenuStripPeople.Size = new Size(233, 256);
+            contextMenuStripPeople.Size = new Size(257, 289);
             // 
             // showDetailsToolStripMenuItem
             // 
             showDetailsToolStripMenuItem.Image = Properties.Resources.PersonDetails_32;
             showDetailsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            showDetailsToolStripMenuItem.Size = new Size(232, 40);
+            showDetailsToolStripMenuItem.Size = new Size(256, 40);
             showDetailsToolStripMenuItem.Text = "&Show Details";
+            showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(229, 6);
+            toolStripMenuItem1.Size = new Size(253, 6);
             // 
             // addNewPersonToolStripMenuItem
             // 
             addNewPersonToolStripMenuItem.Image = Properties.Resources.Add_Person_40;
             addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            addNewPersonToolStripMenuItem.Size = new Size(232, 40);
+            addNewPersonToolStripMenuItem.Size = new Size(256, 40);
             addNewPersonToolStripMenuItem.Text = "Add &New Person";
             addNewPersonToolStripMenuItem.Click += addNewPersonToolStripMenuItem_Click;
             // 
@@ -128,7 +129,7 @@
             // 
             editToolStripMenuItem.Image = Properties.Resources.edit_32;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(232, 40);
+            editToolStripMenuItem.Size = new Size(256, 40);
             editToolStripMenuItem.Text = "&Edit";
             editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
@@ -136,27 +137,27 @@
             // 
             deleteToolStripMenuItem.Image = (Image)resources.GetObject("deleteToolStripMenuItem.Image");
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(232, 40);
+            deleteToolStripMenuItem.Size = new Size(256, 40);
             deleteToolStripMenuItem.Text = "&Delete";
             deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(229, 6);
+            toolStripMenuItem2.Size = new Size(253, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
             sendEmailToolStripMenuItem.Image = Properties.Resources.send_email_32;
             sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            sendEmailToolStripMenuItem.Size = new Size(232, 40);
+            sendEmailToolStripMenuItem.Size = new Size(256, 40);
             sendEmailToolStripMenuItem.Text = "&Send Email";
             // 
             // phoneCallToolStripMenuItem
             // 
             phoneCallToolStripMenuItem.Image = (Image)resources.GetObject("phoneCallToolStripMenuItem.Image");
             phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            phoneCallToolStripMenuItem.Size = new Size(232, 40);
+            phoneCallToolStripMenuItem.Size = new Size(256, 40);
             phoneCallToolStripMenuItem.Text = "&Phone Call";
             // 
             // txtFilterValue

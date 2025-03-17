@@ -195,5 +195,13 @@ namespace DVLD_PresentationLayer.People
 
             }
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = (int)dgvpeople.CurrentRow.Cells[0].Value;
+            Form frm = new frmShowPersonInfo(PersonID);
+            frm.ShowDialog();
+            _RefreshPeoplList();
+        }
     }
 }

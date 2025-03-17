@@ -13,3 +13,4 @@ C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-Bus
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\refint\DVLD-BusinessLayer.dll
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.pdb
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\ref\DVLD-BusinessLayer.dll
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.sourcelink.json

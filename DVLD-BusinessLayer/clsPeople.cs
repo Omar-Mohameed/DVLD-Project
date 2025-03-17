@@ -151,5 +151,10 @@ namespace DVLD_BusinessLayer
         {
             return clsPersonData.DeletePerson(PersonID);
         }
+
+        public static clsPeople Find(string nationalNo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -69,3 +69,6 @@ C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\bin\Debug\net8.0-wind
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.People.frmShowPeoples.resources
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.People.frmAddUpdatePerson.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.People.Controls.ctrlPersonCard.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.People.frmShowPersonInfo.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD-PresentationLayer.sourcelink.json
