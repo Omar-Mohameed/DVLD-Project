@@ -1,0 +1,12 @@
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\bin\Debug\net8.0\DVLD-DataAccessLayer.deps.json
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\bin\Debug\net8.0\DVLD-DataAccessLayer.dll
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\bin\Debug\net8.0\DVLD-DataAccessLayer.pdb
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.AssemblyInfo.cs
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.dll
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\refint\DVLD-DataAccessLayer.dll
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.pdb
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\ref\DVLD-DataAccessLayer.dll
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-DataAccessLayer\obj\Debug\net8.0\DVLD-DataAccessLayer.csproj.AssemblyReference.cache
