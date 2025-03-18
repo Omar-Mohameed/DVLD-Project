@@ -303,6 +303,83 @@ namespace DVLD_DataAccessLayer
             return isFound;
         }
 
+
+
+        public static bool GetPersonInfoByNationalNo(string NationalNo, ref int PersonID, ref string FirstName, ref string SecondName,
+                ref string ThirdName, ref string LastName, ref DateTime DateOfBirth,
+                 ref short Gendor, ref string Address, ref string Phone, ref string Email,
+                 ref int NationalityCountryID, ref string ImagePath)
+        {
+            bool isFound = false;
+            string query = "SELECT * FROM People WHERE NationalNo = @NationalNo";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@NationalNo", NationalNo);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                isFound = true;
+
+                                PersonID = (int)reader["PersonID"];
+                                FirstName = (string)reader["FirstName"];
+                                SecondName = (string)reader["SecondName"];
+
+                                //ThirdName: allows null in database so we should handle null
+                                if (reader["ThirdName"] != DBNull.Value)
+                                {
+                                    ThirdName = (string)reader["ThirdName"];
+                                }
+                                else
+                                {
+                                    ThirdName = "";
+                                }
+
+                                LastName = (string)reader["LastName"];
+                                DateOfBirth = (DateTime)reader["DateOfBirth"];
+                                Gendor = (byte)reader["Gendor"];
+                                Address = (string)reader["Address"];
+                                Phone = (string)reader["Phone"];
+
+                                //Email: allows null in database so we should handle null
+                                if (reader["Email"] != DBNull.Value)
+                                {
+                                    Email = (string)reader["Email"];
+                                }
+                                else
+                                {
+                                    Email = "";
+                                }
+
+                                NationalityCountryID = (int)reader["NationalityCountryID"];
+
+                                //ImagePath: allows null in database so we should handle null
+                                if (reader["ImagePath"] != DBNull.Value)
+                                {
+                                    ImagePath = (string)reader["ImagePath"];
+                                }
+                                else
+                                {
+                                    ImagePath = "";
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                isFound = false;
+            }
+            return isFound;
+        }
         public static bool DeletePerson(int personID)
         {
             int rowsAffected = 0;
@@ -325,12 +402,12 @@ namespace DVLD_DataAccessLayer
             return rowsAffected > 0;
 
         }
+        
         private static void LogError(string message)
         {
             // تسجيل الخطأ (قد يكون ملفًا نصيًا أو نظام تسجيل أخطاء)
             Console.WriteLine(message); // استبدل بـ نظام تسجيل أخطاء فعلي.
         }
 
-        
     }
 }
