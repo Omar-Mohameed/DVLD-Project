@@ -1,4 +1,5 @@
 using DVLD_PresentationLayer.People;
+using DVLD_PresentationLayer.User;
 
 namespace DVLD_PresentationLayer
 {
@@ -18,6 +19,12 @@ namespace DVLD_PresentationLayer
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmShowPeoples();
+            frm.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmlistusers();
             frm.ShowDialog();
         }
     }

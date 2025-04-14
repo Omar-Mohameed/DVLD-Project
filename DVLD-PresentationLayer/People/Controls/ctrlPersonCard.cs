@@ -23,6 +23,10 @@ namespace DVLD_PresentationLayer.People.Controls
         {
             get { return _PersonID; }
         }
+        public clsPeople SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
         public ctrlPersonCard()
         {
             InitializeComponent();

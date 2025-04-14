@@ -203,5 +203,10 @@ namespace DVLD_PresentationLayer.People
             frm.ShowDialog();
             _RefreshPeoplList();
         }
+
+        private void dgvpeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

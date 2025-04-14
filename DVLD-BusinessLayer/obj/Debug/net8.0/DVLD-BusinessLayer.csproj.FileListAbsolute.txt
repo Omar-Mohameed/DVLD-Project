@@ -8,9 +8,9 @@ C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-Bus
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.AssemblyInfoInputs.cache
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.AssemblyInfo.cs
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.sourcelink.json
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-Bus.3E8C9A82.Up2Date
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.dll
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\refint\DVLD-BusinessLayer.dll
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.pdb
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\ref\DVLD-BusinessLayer.dll
-C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-BusinessLayer\obj\Debug\net8.0\DVLD-BusinessLayer.sourcelink.json
