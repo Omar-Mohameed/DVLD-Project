@@ -53,6 +53,9 @@
             driversToolStripMenuItem = new ToolStripMenuItem();
             usersToolStripMenuItem = new ToolStripMenuItem();
             accountSettingsToolStripMenuItem = new ToolStripMenuItem();
+            currentUserInfoToolStripMenuItem = new ToolStripMenuItem();
+            changePasswordToolStripMenuItem = new ToolStripMenuItem();
+            signOutToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             msmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -203,6 +206,7 @@
             manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
             manageApplicationTypesToolStripMenuItem.Size = new Size(466, 74);
             manageApplicationTypesToolStripMenuItem.Text = "Manage Application &Types";
+            manageApplicationTypesToolStripMenuItem.Click += manageApplicationTypesToolStripMenuItem_Click;
             // 
             // manageTestTypesToolStripMenuItem
             // 
@@ -211,6 +215,7 @@
             manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
             manageTestTypesToolStripMenuItem.Size = new Size(466, 74);
             manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
+            manageTestTypesToolStripMenuItem.Click += manageTestTypesToolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
@@ -233,6 +238,7 @@
             driversToolStripMenuItem.Name = "driversToolStripMenuItem";
             driversToolStripMenuItem.Size = new Size(176, 68);
             driversToolStripMenuItem.Text = "&Drivers";
+            driversToolStripMenuItem.Click += driversToolStripMenuItem_Click;
             // 
             // usersToolStripMenuItem
             // 
@@ -245,21 +251,46 @@
             // 
             // accountSettingsToolStripMenuItem
             // 
+            accountSettingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { currentUserInfoToolStripMenuItem, changePasswordToolStripMenuItem, signOutToolStripMenuItem });
             accountSettingsToolStripMenuItem.Image = (Image)resources.GetObject("accountSettingsToolStripMenuItem.Image");
             accountSettingsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
             accountSettingsToolStripMenuItem.Size = new Size(281, 68);
             accountSettingsToolStripMenuItem.Text = "Account &Settings";
             // 
+            // currentUserInfoToolStripMenuItem
+            // 
+            currentUserInfoToolStripMenuItem.Image = Properties.Resources.PersonDetails_32;
+            currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
+            currentUserInfoToolStripMenuItem.Size = new Size(328, 38);
+            currentUserInfoToolStripMenuItem.Text = "&Current User Info";
+            currentUserInfoToolStripMenuItem.Click += currentUserInfoToolStripMenuItem_Click;
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            changePasswordToolStripMenuItem.Image = Properties.Resources.Password_32;
+            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            changePasswordToolStripMenuItem.Size = new Size(328, 38);
+            changePasswordToolStripMenuItem.Text = "Change &Password";
+            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
+            // 
+            // signOutToolStripMenuItem
+            // 
+            signOutToolStripMenuItem.Image = Properties.Resources.sign_out_32__2;
+            signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            signOutToolStripMenuItem.Size = new Size(328, 38);
+            signOutToolStripMenuItem.Text = "Sign &Out";
+            signOutToolStripMenuItem.Click += signOutToolStripMenuItem_Click;
+            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.Logo_Final;
             pictureBox1.Location = new Point(0, 72);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1924, 978);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
@@ -312,5 +343,8 @@
         private ToolStripMenuItem detainLicenseToolStripMenuItem;
         private ToolStripMenuItem releaseDetainedLicenseToolStripMenuItem;
         private PictureBox pictureBox1;
+        private ToolStripMenuItem currentUserInfoToolStripMenuItem;
+        private ToolStripMenuItem changePasswordToolStripMenuItem;
+        private ToolStripMenuItem signOutToolStripMenuItem;
     }
 }

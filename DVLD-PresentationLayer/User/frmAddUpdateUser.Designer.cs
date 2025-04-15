@@ -131,6 +131,8 @@
             // chkIsActive
             // 
             chkIsActive.AutoSize = true;
+            chkIsActive.Checked = true;
+            chkIsActive.CheckState = CheckState.Checked;
             chkIsActive.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             chkIsActive.Location = new Point(315, 402);
             chkIsActive.Name = "chkIsActive";
@@ -144,8 +146,10 @@
             txtConfirmPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtConfirmPassword.Location = new Point(318, 314);
             txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
             txtConfirmPassword.Size = new Size(150, 35);
             txtConfirmPassword.TabIndex = 7;
+            txtConfirmPassword.Validating += txtConfirmPassword_Validating;
             // 
             // label5
             // 
@@ -162,8 +166,10 @@
             txtPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(318, 237);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(150, 35);
             txtPassword.TabIndex = 5;
+            txtPassword.Validating += txtPassword_Validating;
             // 
             // label4
             // 
@@ -182,6 +188,7 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(150, 35);
             txtUserName.TabIndex = 3;
+            txtUserName.Validating += txtUserName_Validating;
             // 
             // label3
             // 
@@ -243,8 +250,11 @@
             // 
             // frmAddUpdateUser
             // 
+            AcceptButton = btnSave;
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
+            CancelButton = btnclose;
             ClientSize = new Size(904, 677);
             Controls.Add(btnSave);
             Controls.Add(btnclose);
@@ -254,6 +264,8 @@
             Name = "frmAddUpdateUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAddUpdateUser";
+            Activated += frmAddUpdateUser_Activated;
+            Load += frmAddUpdateUser_Load;
             tcUserInfo.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tpLoginInfo.ResumeLayout(false);

@@ -77,3 +77,8 @@ C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-wind
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.User.frmlistusers.resources
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.User.ctrlUserCard.resources
 C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.User.frmUserInfo.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.Login.frmLogin.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.User.frmChangePassword.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.Drivers.frmListDrivers.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.Applications.Application_Type.frmManageApplicationTypes.resources
+C:\Users\FUTURE\Desktop\cSharp\DVLD\DVLD-PresentationLayer\obj\Debug\net8.0-windows\DVLD_PresentationLayer.Tests.frmListTestTypes.resources

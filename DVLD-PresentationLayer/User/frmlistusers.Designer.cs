@@ -35,7 +35,6 @@
             txtFilterValue = new TextBox();
             cbFilterBy = new ComboBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
             addnewuser = new Button();
             btnclose = new Button();
             lblRecordsCount = new Label();
@@ -50,6 +49,8 @@
             toolStripMenuItem2 = new ToolStripSeparator();
             sendEmailToolStripMenuItem = new ToolStripMenuItem();
             phoneCallToolStripMenuItem = new ToolStripMenuItem();
+            cbIsActive = new ComboBox();
+            changePassword = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pbpersonimage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
             contextMenuStripPeople.SuspendLayout();
@@ -79,10 +80,11 @@
             // txtFilterValue
             // 
             txtFilterValue.Font = new Font("Segoe UI", 12F);
-            txtFilterValue.Location = new Point(505, 256);
+            txtFilterValue.Location = new Point(350, 257);
             txtFilterValue.Name = "txtFilterValue";
-            txtFilterValue.Size = new Size(133, 39);
+            txtFilterValue.Size = new Size(168, 39);
             txtFilterValue.TabIndex = 11;
+            txtFilterValue.TextChanged += txtFilterValue_TextChanged;
             // 
             // cbFilterBy
             // 
@@ -91,8 +93,9 @@
             cbFilterBy.Items.AddRange(new object[] { "None", "User ID", "UserName", "Person ID", "Full Name", "Is Active" });
             cbFilterBy.Location = new Point(143, 255);
             cbFilterBy.Name = "cbFilterBy";
-            cbFilterBy.Size = new Size(139, 40);
+            cbFilterBy.Size = new Size(185, 40);
             cbFilterBy.TabIndex = 10;
+            cbFilterBy.SelectedIndexChanged += cbFilterBy_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -103,16 +106,6 @@
             label2.Size = new Size(134, 38);
             label2.TabIndex = 9;
             label2.Text = "Filter By:";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "All", "Yes", "No" });
-            comboBox1.Location = new Point(321, 256);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(146, 40);
-            comboBox1.TabIndex = 12;
             // 
             // addnewuser
             // 
@@ -180,29 +173,29 @@
             // contextMenuStripPeople
             // 
             contextMenuStripPeople.ImageScalingSize = new Size(24, 24);
-            contextMenuStripPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, toolStripMenuItem1, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, toolStripMenuItem2, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
+            contextMenuStripPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, toolStripMenuItem1, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, changePassword, toolStripMenuItem2, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
             contextMenuStripPeople.Name = "contextMenuStripPeople";
-            contextMenuStripPeople.Size = new Size(215, 256);
+            contextMenuStripPeople.Size = new Size(257, 329);
             // 
             // showDetailsToolStripMenuItem
             // 
             showDetailsToolStripMenuItem.Image = Properties.Resources.PersonDetails_32;
             showDetailsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            showDetailsToolStripMenuItem.Size = new Size(214, 40);
+            showDetailsToolStripMenuItem.Size = new Size(256, 40);
             showDetailsToolStripMenuItem.Text = "&Show Details";
             showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(211, 6);
+            toolStripMenuItem1.Size = new Size(253, 6);
             // 
             // addNewPersonToolStripMenuItem
             // 
             addNewPersonToolStripMenuItem.Image = Properties.Resources.Add_Person_40;
             addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            addNewPersonToolStripMenuItem.Size = new Size(214, 40);
+            addNewPersonToolStripMenuItem.Size = new Size(256, 40);
             addNewPersonToolStripMenuItem.Text = "Add &New User";
             addNewPersonToolStripMenuItem.Click += addNewPersonToolStripMenuItem_Click;
             // 
@@ -210,34 +203,54 @@
             // 
             editToolStripMenuItem.Image = Properties.Resources.edit_32;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(214, 40);
+            editToolStripMenuItem.Size = new Size(256, 40);
             editToolStripMenuItem.Text = "&Edit";
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Image = (Image)resources.GetObject("deleteToolStripMenuItem.Image");
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(214, 40);
+            deleteToolStripMenuItem.Size = new Size(256, 40);
             deleteToolStripMenuItem.Text = "&Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(211, 6);
+            toolStripMenuItem2.Size = new Size(253, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
             sendEmailToolStripMenuItem.Image = Properties.Resources.send_email_32;
             sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            sendEmailToolStripMenuItem.Size = new Size(214, 40);
+            sendEmailToolStripMenuItem.Size = new Size(256, 40);
             sendEmailToolStripMenuItem.Text = "&Send Email";
             // 
             // phoneCallToolStripMenuItem
             // 
             phoneCallToolStripMenuItem.Image = (Image)resources.GetObject("phoneCallToolStripMenuItem.Image");
             phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            phoneCallToolStripMenuItem.Size = new Size(214, 40);
+            phoneCallToolStripMenuItem.Size = new Size(256, 40);
             phoneCallToolStripMenuItem.Text = "&Phone Call";
+            // 
+            // cbIsActive
+            // 
+            cbIsActive.Font = new Font("Segoe UI", 12F);
+            cbIsActive.FormattingEnabled = true;
+            cbIsActive.Items.AddRange(new object[] { "All", "Yes", "No" });
+            cbIsActive.Location = new Point(350, 255);
+            cbIsActive.Name = "cbIsActive";
+            cbIsActive.Size = new Size(168, 40);
+            cbIsActive.TabIndex = 21;
+            cbIsActive.SelectedIndexChanged += cbIsActive_SelectedIndexChanged;
+            // 
+            // changePassword
+            // 
+            changePassword.Image = Properties.Resources.Password_32;
+            changePassword.Name = "changePassword";
+            changePassword.Size = new Size(256, 40);
+            changePassword.Text = "&Change Password";
+            changePassword.Click += changePassword_Click;
             // 
             // frmlistusers
             // 
@@ -245,12 +258,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnclose;
             ClientSize = new Size(897, 760);
+            Controls.Add(cbIsActive);
             Controls.Add(dgvUsers);
             Controls.Add(lblRecordsCount);
             Controls.Add(label3);
             Controls.Add(btnclose);
             Controls.Add(addnewuser);
-            Controls.Add(comboBox1);
             Controls.Add(txtFilterValue);
             Controls.Add(cbFilterBy);
             Controls.Add(label2);
@@ -275,7 +288,6 @@
         private TextBox txtFilterValue;
         private ComboBox cbFilterBy;
         private Label label2;
-        private ComboBox comboBox1;
         private Button addnewuser;
         private Button btnclose;
         private Label lblRecordsCount;
@@ -290,5 +302,7 @@
         private ToolStripSeparator toolStripMenuItem2;
         private ToolStripMenuItem sendEmailToolStripMenuItem;
         private ToolStripMenuItem phoneCallToolStripMenuItem;
+        private ComboBox cbIsActive;
+        private ToolStripMenuItem changePassword;
     }
 }

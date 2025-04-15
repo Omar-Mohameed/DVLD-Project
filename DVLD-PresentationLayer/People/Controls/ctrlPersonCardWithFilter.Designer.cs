@@ -96,6 +96,7 @@
             // 
             // cbFilterBy
             // 
+            cbFilterBy.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFilterBy.FormattingEnabled = true;
             cbFilterBy.Items.AddRange(new object[] { "National No.", "Person ID" });
             cbFilterBy.Location = new Point(145, 44);
@@ -125,6 +126,7 @@
             Controls.Add(ctrlPersonCard1);
             Name = "ctrlPersonCardWithFilter";
             Size = new Size(829, 430);
+            Load += ctrlPersonCardWithFilter_Load;
             gbFilters.ResumeLayout(false);
             gbFilters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

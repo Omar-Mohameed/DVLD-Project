@@ -59,11 +59,13 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnclose;
             ClientSize = new Size(836, 548);
             Controls.Add(btnclose);
             Controls.Add(ctrlUserCard1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmUserInfo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmUserInfo";
             Load += frmUserInfo_Load;
             ResumeLayout(false);

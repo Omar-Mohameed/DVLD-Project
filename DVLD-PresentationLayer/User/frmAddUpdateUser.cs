@@ -241,7 +241,6 @@ namespace DVLD_PresentationLayer.User
             {
                 MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ctrlPersonCardWithFilter1.FilterFocus();
-
             }
 
         }

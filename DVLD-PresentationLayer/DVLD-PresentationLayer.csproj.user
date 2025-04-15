@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Applications\Application Type\frmManageApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Drivers\frmListDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,10 +28,16 @@
     <Compile Update="People\frmShowPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Tests\frmListTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="User\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="User\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="User\frmlistusers.cs">

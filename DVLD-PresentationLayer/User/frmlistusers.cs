@@ -46,7 +46,113 @@ namespace DVLD_PresentationLayer.User
             dgvUsers.Columns[4].HeaderText = "Is Active";
             dgvUsers.Columns[4].Width = 120;
         }
+        private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+            if (cbFilterBy.Text == "Is Active")
+            {
+                txtFilterValue.Visible = false;
+                cbIsActive.Visible = true;
+                cbIsActive.Focus();
+                cbIsActive.SelectedIndex = 0;
+            }
+
+            else
+
+            {
+
+                txtFilterValue.Visible = (cbFilterBy.Text != "None");
+                cbIsActive.Visible = false;
+
+                if (cbFilterBy.Text == "None")
+                {
+                    txtFilterValue.Enabled = false;
+                }
+                else
+                    txtFilterValue.Enabled = true;
+
+                txtFilterValue.Text = "";
+                txtFilterValue.Focus();
+            }
+
+
+        }
+
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "";
+            //Map Selected Filter to real Column name 
+            switch (cbFilterBy.Text)
+            {
+                case "User ID":
+                    FilterColumn = "UserID";
+                    break;
+                case "UserName":
+                    FilterColumn = "UserName";
+                    break;
+
+                case "Person ID":
+                    FilterColumn = "PersonID";
+                    break;
+
+
+                case "Full Name":
+                    FilterColumn = "FullName";
+                    break;
+
+                default:
+                    FilterColumn = "None";
+                    break;
+
+            }
+
+            //Reset the filters in case nothing selected or filter value conains nothing.
+            if (txtFilterValue.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtAllUsers.DefaultView.RowFilter = "";
+                lblRecordsCount.Text = dgvUsers.Rows.Count.ToString();
+                return;
+            }
+
+
+            if (FilterColumn != "FullName" && FilterColumn != "UserName")
+                //in this case we deal with numbers not string.
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterValue.Text.Trim());
+            else
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterValue.Text.Trim());
+
+            lblRecordsCount.Text = _dtAllUsers.Rows.Count.ToString();
+        }
+        private void cbIsActive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            string FilterColumn = "IsActive";
+            string FilterValue = cbIsActive.Text;
+
+            switch (FilterValue)
+            {
+                case "All":
+                    break;
+                case "Yes":
+                    FilterValue = "1";
+                    break;
+                case "No":
+                    FilterValue = "0";
+                    break;
+            }
+
+
+            if (FilterValue == "All")
+                _dtAllUsers.DefaultView.RowFilter = "";
+            else
+                //in this case we deal with numbers not string.
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, FilterValue);
+
+            lblRecordsCount.Text = _dtAllUsers.Rows.Count.ToString();
+
+
+        }
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUserInfo Frm1 = new frmUserInfo((int)dgvUsers.CurrentRow.Cells[0].Value);
@@ -65,6 +171,30 @@ namespace DVLD_PresentationLayer.User
             frmAddUpdateUser Frm1 = new frmAddUpdateUser();
             Frm1.ShowDialog();
             frmlistusers_Load(null, null);
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+
+            if(MessageBox.Show("Are you sure you want to delete User [" + dgvUsers.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (clsUser.DeleteUser(UserID))
+                {
+                    MessageBox.Show("User has been deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmlistusers_Load(null, null);
+                }
+                else
+                    MessageBox.Show("User is not delted due to data connected to it.", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void changePassword_Click(object sender, EventArgs e)
+        {
+            int UserID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            frmChangePassword Frm1 = new frmChangePassword(UserID);
+            Frm1.ShowDialog();
         }
     }
 }
